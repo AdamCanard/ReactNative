@@ -35,18 +35,21 @@ const style = StyleSheet.create({
     fontSize: 30,
     fontWeight: '600',
     color: '#000080',
+    fontFamily: 'ms-sans-serif',
   },
   subtitleStyle: {
     textAlign: 'center',
     fontSize: 25,
     fontWeight: '400',
     color: '#1084d0',
+    fontFamily: 'ms-sans-serif',
   },
   introStyle: {
     textAlign: 'center',
     fontSize: 22,
     fontWeight: '400',
     color: '#0842A8',
+    fontFamily: 'ms-sans-serif',
   },
   socialBarStyle: { flexDirection: 'row', justifyContent: 'space-evenly' },
   socialImageStyle: {
