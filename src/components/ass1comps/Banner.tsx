@@ -3,7 +3,7 @@ import { Image, StyleSheet, View } from 'react-native';
 export default function Banner(): React.JSX.Element {
   return (
     <View style={style.bannerStyle}>
-      <Image source={require('../../assets/BannerImage.jpg')} style={style.bannerImageStyle} />
+      <Image source={require('../../../assets/BannerImage.jpg')} style={style.bannerImageStyle} />
     </View>
   );
 }

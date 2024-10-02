@@ -1,11 +1,19 @@
+/**
+ * My To Do List App
+ *
+ * @format
+ */
+
 import React from 'react';
 import { SafeAreaView } from 'react-native';
-import { Main } from './src/Main';
+import ToDoList from './src/components/ass2comps/ToDoList';
+import ToDoForm from './src/components/ass2comps/ToDoForm';
 
-function App(): React.JSX.Element {
+function App() {
   return (
     <SafeAreaView>
-      <Main />
+      <ToDoList />
+      <ToDoForm />
     </SafeAreaView>
   );
 }

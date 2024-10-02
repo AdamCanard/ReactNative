@@ -8,10 +8,10 @@ export default function InfoCard(): React.JSX.Element {
         <Text style={style.subtitleStyle}>Local Beerfluencer</Text>
         <Text style={style.introStyle}>Calgary Developer {'\n'} Java Enthusiast </Text>
         <View style={style.socialBarStyle}>
-          <Image style={style.socialImageStyle} source={require('../../assets/fb.png')} />
-          <Image style={style.socialImageStyle} source={require('../../assets/insta.png')} />
-          <Image style={style.socialImageStyle} source={require('../../assets/linkedin.png')} />
-          <Image style={style.socialImageStyle} source={require('../../assets/twitter.png')} />
+          <Image style={style.socialImageStyle} source={require('../../../assets/fb.png')} />
+          <Image style={style.socialImageStyle} source={require('../../../assets/insta.png')} />
+          <Image style={style.socialImageStyle} source={require('../../../assets/linkedin.png')} />
+          <Image style={style.socialImageStyle} source={require('../../../assets/twitter.png')} />
         </View>
       </View>
     </View>

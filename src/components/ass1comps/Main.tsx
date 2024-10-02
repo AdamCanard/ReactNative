@@ -1,6 +1,6 @@
 import React from 'react';
 import { SafeAreaView, StyleSheet, View } from 'react-native';
-import ProfileCard from './components/ProfileCard';
+import ProfileCard from './ProfileCard';
 
 export function Main(): React.JSX.Element {
   return (

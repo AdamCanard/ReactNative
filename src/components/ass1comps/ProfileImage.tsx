@@ -4,10 +4,11 @@ import { Image, StyleSheet, View } from 'react-native';
 export default function ProfileImage(): React.JSX.Element {
   return (
     <View style={style.profileImageStyle}>
-      <Image source={require('../../assets/ProfileImage.png')} style={style.profilePhotoStyle} />
+      <Image source={require('../../../assets/ProfileImage.png')} style={style.profilePhotoStyle} />
     </View>
   );
 }
+
 const style = StyleSheet.create({
   profileImageStyle: {
     position: 'absolute',
