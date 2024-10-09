@@ -5,15 +5,17 @@
  */
 
 import React from 'react';
+import { useState } from 'react';
 import { SafeAreaView } from 'react-native';
-import ToDoList from './src/components/ass2comps/ToDoList';
-import ToDoForm from './src/components/ass2comps/ToDoForm';
+import ToDoList from './src/components/Labcomps/ToDoList';
+import ToDoForm from './src/components/Labcomps/ToDoForm';
 
 function App() {
+  const [tasks, setTasks] = useState<string[]>(['Do Laundry', 'Go to gym', 'Walk dog']);
   return (
     <SafeAreaView>
-      <ToDoList />
-      <ToDoForm />
+      <ToDoList tasks={tasks} />
+      <ToDoForm tasks={tasks} setTasks={setTasks} />
     </SafeAreaView>
   );
 }

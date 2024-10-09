@@ -1,12 +1,26 @@
-import React from 'react';
+import React, { Dispatch, SetStateAction, useState } from 'react';
 import { StyleSheet, View, TextInput, Button } from 'react-native';
 
-export default function ToDoForm() {
+export default function ToDoForm(props: {
+  tasks: string[];
+  setTasks: Dispatch<SetStateAction<string[]>>;
+}) {
+  const [currentTask, setCurrentTask] = useState<string>('');
+
+  const handlePress = () => {
+    props.setTasks([...props.tasks, currentTask]);
+    setCurrentTask('');
+  };
   return (
     <>
       <View style={styles.form}>
-        <TextInput style={styles.input} placeholder="Add a new task..." />
-        <Button title="Add" />
+        <TextInput
+          style={styles.input}
+          placeholder="Add a new task..."
+          value={currentTask}
+          onChangeText={setCurrentTask}
+        />
+        <Button title="Add" onPress={handlePress} />
       </View>
     </>
   );

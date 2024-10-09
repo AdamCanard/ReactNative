@@ -1,26 +1,28 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Pressable, View, Text, ScrollView, StyleSheet } from 'react-native';
 
-export default function ToDoList() {
+export default function ToDoList(props: { tasks: string[] }) {
   return (
     <>
       <ScrollView style={styles.scrollStyle}>
-        <Pressable>
-          <View style={[styles.task, styles.completed]}>
-            <Text style={styles.taskText}>Do laundry</Text>
-          </View>
-        </Pressable>
-        <Pressable>
-          <View style={[styles.task]}>
-            <Text style={styles.taskText}>Go to gym</Text>
-          </View>
-        </Pressable>
-        <Pressable>
-          <View style={[styles.task, styles.completed]}>
-            <Text style={styles.taskText}>Walk dog</Text>
-          </View>
-        </Pressable>
+        {props.tasks.map((task, index) => {
+          return <Task task={task} key={index} />;
+        })}
       </ScrollView>
+    </>
+  );
+}
+
+function Task(props: { task: string }) {
+  const [pressed, setPressed] = useState(false);
+
+  return (
+    <>
+      <Pressable onPress={() => setPressed(!pressed)}>
+        <View style={pressed ? [styles.task, styles.completed] : styles.task}>
+          <Text style={styles.taskText}>{props.task}</Text>
+        </View>
+      </Pressable>
     </>
   );
 }
