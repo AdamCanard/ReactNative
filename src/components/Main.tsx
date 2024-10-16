@@ -1,16 +1,16 @@
 import React, { useState } from 'react';
 import { Clipboard, SafeAreaView, StyleSheet, Text, View } from 'react-native';
-import InputBox from './ass2comps/InputBox';
-import Output from './ass2comps/Output';
-import Btn from './ass2comps/Btn';
-import FormCheckBox from './ass2comps/FormCheckBox';
-import { generatePasswordString } from './ass2comps/utility/passwordGenerator';
+import InputBox from './StateManagement/InputBox';
+import Output from './StateManagement/Output';
+import Btn from './StateManagement/Btn';
+import FormCheckBox from './StateManagement/FormCheckBox';
+import { generatePasswordString } from './StateManagement/utility/passwordGenerator';
 import {
   showErrorSnackbar,
   showInfoSnackBar,
   showSuccessSnackBar,
-} from './ass2comps/utility/utils';
-import { PasswordRequirement } from './ass2comps/utility/Consts';
+} from './StateManagement/utility/utils';
+import { PasswordRequirement } from './StateManagement/utility/Consts';
 
 export default function Main(): React.JSX.Element {
   const [number, setNumber] = useState<string>('');
