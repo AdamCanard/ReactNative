@@ -12,10 +12,13 @@ import ToDoForm from './src/components/Labcomps/ToDoForm';
 
 function App() {
   const [tasks, setTasks] = useState<string[]>(['Do Laundry', 'Go to gym', 'Walk dog']);
+  const addTask = (task: string) => {
+    setTasks([...tasks, task]);
+  };
   return (
     <SafeAreaView>
       <ToDoList tasks={tasks} />
-      <ToDoForm tasks={tasks} setTasks={setTasks} />
+      <ToDoForm addTask={addTask} />
     </SafeAreaView>
   );
 }
